@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte - Connexion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-white">
+
+    <!-- Main Container -->
+    <div class="w-full max-w-[400px] text-center p-4 sm:p-8 bg-white ">
+        <!-- Back Arrow -->
+        <div class="flex justify-start">
+            <a href="index.html" class="text-blue-500 text-2xl">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        
+        <!-- Logo Section -->
+        <div class="mb-6 sm:mb-8">
+            <img src="logo.png" alt="Logo Campus" class="w-24 sm:w-32 mx-auto" />
+        </div>
+
+        <!-- Title Section -->
+        <header class="mb-6 sm:mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#df1414]">Mon compte</h1>
+        </header>
+
+        <!-- Form Section -->
+        <form action="" class="space-y-4 sm:space-y-6">
+            <!-- Identifiant/Adresse mail Field -->
+            <div class="relative">
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Identifiant/Adresse mail" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-400 to-pink-300 shadow-md px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Mot de passe Field -->
+            <div class="relative">
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Mot de passe" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-pink-300 to-red-300 shadow-md px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Button to connect -->
+            <div class="text-center mt-4 sm:mt-6">
+                <button
+                    type="submit"
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-red-600 text-white font-medium text-base sm:text-lg transform hover:scale-105 transition duration-300"
+                >
+                    Me connecter
+                </button>
+            </div>
+        </form>
+
+        <!-- Illustration Section -->
+        <div class="mt-6 sm:mt-8">
+            <img src="students-illustration.png" alt="Étudiants" class="w-full mx-auto" />
+        </div>
+    </div>
+    
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

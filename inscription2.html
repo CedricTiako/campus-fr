@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Étape 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="flex justify-center items-center min-h-screen bg-white">
+
+    <!-- Main Form Section -->
+    <div class="w-full max-w-[400px] text-center p-4 sm:p-8 bg-white ">
+        <!-- Title Section -->
+        <header class="mb-6 sm:mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#df1414]">Inscription</h1>
+            <p class="text-lg sm:text-xl font-semibold text-black mt-2">Étape 2</p>
+        </header>
+
+        <!-- Form Section -->
+        <form action="wel.html" class="space-y-4 sm:space-y-6" method="get">
+            <!-- Mot de passe Field -->
+            <div class="relative">
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Mot de passe" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-400 to-pink-300 shadow-md px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Confirmation du mot de passe Field -->
+            <div class="relative">
+                <input 
+                    type="password" 
+                    name="confirm_password" 
+                    placeholder="Confirmation du mot de passe" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-pink-300 to-red-300 shadow-md px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Attestation de statut étudiant Field amélioré -->
+            <div class="relative">
+                <label class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-400 to-purple-400 shadow-md flex items-center justify-center cursor-pointer transition transform hover:scale-105">
+                    <i class="fas fa-file-upload text-white mr-2"></i>
+                    <span class="text-white font-medium">Télécharger Attestation de statut étudiant</span>
+                    <input 
+                        type="file" 
+                        name="student_certificate" 
+                        class="hidden"
+                        required
+                    />
+                </label>
+            </div>
+
+            <!-- Confirmer mon identité Field amélioré -->
+            <div class="relative">
+                <label class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-400 to-purple-400 shadow-md flex items-center justify-center cursor-pointer transition transform hover:scale-105">
+                    <i class="fas fa-id-card text-white mr-2"></i>
+                    <span class="text-white font-medium">Télécharger Pièce d'identité</span>
+                    <input 
+                        type="file" 
+                        name="identity_document" 
+                        class="hidden"
+                        required
+                    />
+                </label>
+            </div>
+
+            <!-- Validation Button -->
+            <div class="text-center mt-4 sm:mt-6">
+                <button
+                    type="submit"
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-red-600 text-white font-medium text-base sm:text-lg transform hover:scale-105 transition duration-300"
+                >
+                    Confirmer mon inscription
+                </button>
+            </div>
+
+            <!-- Info text -->
+            <p class="mt-3 sm:mt-4 text-center text-xs sm:text-sm text-[#0c23b8] font-medium">
+                En poursuivant votre inscription, vous acceptez 
+                <a href="#" class="underline text-blue-900 font-bold">nos conditions générales d'utilisation</a>
+            </p>
+        </form>
+
+        <!-- Logo at the bottom -->
+        <footer class="mt-8 sm:mt-6">
+            <img src="logo.png" alt="Logo Campus" class="w-32 sm:w-24 mx-auto" />
+        </footer>
+    </div>
+</body>
+</html>

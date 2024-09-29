@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - C'est validé !</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the background image */
+        .bg-confitie {
+            background-image: url('confitie.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-confitie flex justify-center items-center min-h-screen">
+    <!-- Main Container -->
+    <div class="w-full max-w-[400px] text-center p-6 sm:p-8 bg-white bg-opacity-90 rounded-lg  backdrop-blur-md">
+        <!-- Emoji and Title -->
+        <header class="mb-6 sm:mb-8">
+            <div class="text-4xl mb-2">🥳</div>
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#df1414]">C’est validé !</h1>
+        </header>
+
+        <!-- Message -->
+        <p class="text-md sm:text-lg text-black font-medium mb-6">
+            Cela peut prendre quelques heures pour vérifier tes informations ! En attendant, tu peux commencer à configurer ton profil !
+        </p>
+
+        <!-- Validation Button -->
+        <div class="text-center mt-4 sm:mt-6">
+            <button
+                class="w-full py-3 rounded-full bg-gradient-to-r from-blue-600 to-red-600 text-white font-semibold text-lg transform hover:scale-105 transition duration-300"
+            >
+                Valider les informations
+            </button>
+        </div>
+
+        <!-- Information Text -->
+        <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-[#0c23b8] font-medium px-4 bg-white bg-opacity-80 rounded-full py-2">
+            Tu recevras via ta messagerie CAMPUS, une confirmation, lorsque ton profil sera validé.
+        </p>
+    </div>
+</body>
+</html>

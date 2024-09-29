@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription avec Overlay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ::placeholder {
+            font-weight: bold;
+            color: #000;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-white">
+
+    <!-- Main Form Section -->
+    <div class="w-full max-w-[400px] text-center p-4 sm:p-8 bg-white rounded-lg ">
+        <!-- Title Section -->
+        <header class="mb-6 sm:mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-[#df1414]">Inscription</h1>
+            <p class="text-lg sm:text-xl font-semibold text-black mt-2">Étape 1</p>
+        </header>
+
+        <!-- Form Section -->
+        <form action="inscription2.html" class="space-y-4 sm:space-y-6" method="get">
+            <!-- Nom Field -->
+            <div class="relative">
+                <input 
+                    type="text" 
+                    name="nom" 
+                    placeholder="Nom" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-red-400 opacity-30 px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Prénom Field -->
+            <div class="relative">
+                <input 
+                    type="text" 
+                    name="prenom" 
+                    placeholder="Prénom" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-30 px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Date de naissance Field -->
+            <div class="relative">
+                <input 
+                    type="date" 
+                    name="date_naissance" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-700 to-red-400 opacity-30 px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- n° de téléphone Field -->
+            <div class="relative">
+                <input 
+                    type="tel" 
+                    name="telephone" 
+                    placeholder="n° de téléphone" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-30 px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                />
+            </div>
+
+            <!-- Pays Field -->
+            <div class="relative">
+                <select 
+                    name="pays" 
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-red-400 opacity-30 px-4 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                >
+                    <option value="" disabled selected>Pays</option>
+                    <option value="France">France</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Suisse">Suisse</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+
+            <!-- Validation Button -->
+            <div class="text-center mt-4 sm:mt-6">
+                <button
+                    type="submit"
+                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-red-600 text-white font-medium text-base sm:text-lg transform hover:scale-105 transition duration-300"
+                >
+                    Valider les informations
+                </button>
+            </div>
+
+            <!-- Info text -->
+            <p class="mt-3 sm:mt-4 text-center text-xs sm:text-sm text-[#0c23b8] font-medium">
+                En validant, tu passeras à l’étape suivante
+            </p>
+        </form>
+
+        <!-- Logo at the bottom -->
+        <footer class="mt-8 sm:mt-6">
+            <img src="logo.png" alt="Logo Campus" class="w-32 sm:w-24 mx-auto" />
+        </footer>
+    </div>
+</body>
+</html>
