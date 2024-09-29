@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription avec Overlay</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <style>
         ::placeholder {
             font-weight: bold;
@@ -47,15 +49,28 @@
                 />
             </div>
 
-            <!-- Date de naissance Field -->
+            <!-- Date de naissance Field Amélioré -->
             <div class="relative">
+                <label for="date_naissance" class="absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none transition-all duration-200 ease-in-out origin-left scale-100 text-black font-bold">
+                    Date de naissance
+                </label>
                 <input 
                     type="date" 
+                    id="date_naissance"
                     name="date_naissance" 
-                    class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-700 to-red-400  px-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    class="w-full pl-[30%] h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-700 to-red-400 shadow-md text-black text-center placeholder-transparent focus:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                    placeholder="Date de naissance"
                     required
+                    onfocus="this.previousElementSibling.classList.add('-translate-y-7', 'scale-75', 'text-black', 'font-bold')"
+                    onblur="if(!this.value) this.previousElementSibling.classList.remove('-translate-y-7', 'scale-75', 'text-black', 'font-bold')"
                 />
             </div>
+
+
+
+
+
+
 
             <!-- n° de téléphone Field -->
             <div class="relative">

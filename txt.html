@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date de Naissance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Styling to position the label over the input */
+        .floating-label {
+            position: absolute;
+            left: 12px; /* Adjust left positioning */
+            top: 50%; /* Start label centered */
+            transform: translateY(-50%);
+            transition: all 0.2s ease-in-out;
+            background-color: rgba(255, 255, 255, 0); /* Transparent background to avoid covering the input */
+            padding: 0 4px; /* Padding for better visibility */
+            pointer-events: none; /* Prevent pointer interactions */
+            color: #6b7280; /* Tailwind gray-500 */
+        }
+
+        /* When input is focused or has value */
+        .input-focused {
+            top: -10px;
+            font-size: 0.75rem; /* Text size equivalent to Tailwind's text-sm */
+            color: #2563eb; /* Tailwind blue-500 */
+            background-color: white; /* Background color to enhance visibility */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <!-- Date de naissance Field with Floating Label -->
+    <div class="relative w-80 mb-6">
+        <input 
+            type="date" 
+            id="date_naissance"
+            name="date_naissance" 
+            class="w-full h-12 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-700 to-red-400 shadow-md text-black px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+            required
+        />
+        <label for="date_naissance" id="dateLabel" class="floating-label">Date de naissance</label>
+    </div>
+
+    <script>
+        // Get references to the input and label elements
+        const dateInput = document.getElementById('date_naissance');
+        const dateLabel = document.getElementById('dateLabel');
+
+        // Function to check if input is focused or has a value
+        function checkInput() {
+            if (dateInput.value !== "") {
+                dateLabel.classList.add('input-focused');
+            } else {
+                dateLabel.classList.remove('input-focused');
+            }
+        }
+
+        // Add event listeners
+        dateInput.addEventListener('focus', () => {
+            dateLabel.classList.add('input-focused');
+        });
+
+        dateInput.addEventListener('blur', checkInput);
+
+        // Check on page load in case the input has a value (e.g., if the user clicks "back" in the browser)
+        window.addEventListener('DOMContentLoaded', checkInput);
+    </script>
+</body>
+</html>
